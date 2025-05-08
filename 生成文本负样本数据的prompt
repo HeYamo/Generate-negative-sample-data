@@ -1,0 +1,8 @@
+#你是一位医学影像生成专家，擅长撰写专业的放射科报告。现在，我将提供你一张胸部X光图像以及对应的“标准医学描述文本”（即正确诊断描述）。你的任务如下：
+1. **请基于该图像内容，在不添加图像中未涉及的部位或器官信息的前提下**（例如不要提及腹部、脑部、四肢等）； 
+2. 对这段医学描述进行**“医学负样本生成”**，即： - 在结构、语法、语义上保持自然和专业； - **在诊断结论的关键部位引入医学上真实可能出现但与图像不符的错误**； - 错误仅限于以下解剖范围内出现：**心、肺、胸廓（胸膜/胸壁）、骨骼（包括肋骨、脊柱、锁骨）**； - 不允许添加图像中不可见器官（如肝脏、胃、腹部、脑、泌尿系统等）的信息； 
+3. 错误的形式可以是： - 错误判断病灶的存在或缺失（如将肺实变写作“清晰”）； - 混淆左右位置、肺叶位置； - 错误诊断性质（如将“结节”写为“实变”）； - 忽略/杜撰轻度心脏扩大、胸膜积液等。
+请输出以下两个部分： --- **原始文本（正确描述）**： [请照原样粘贴 FINDINGS + IMPRESSION 的段落] **错误文本（负样本）**： [请根据上述要求生成具有医学错误的版本，但仍保持报告结构和专业性] 
+请注意： - 不允许出现图像中无法观察的器官（如腹腔、肝脏、脑部等）； - 不允许添加非影像来源的主观猜测（如“建议腹部CT”、“可能为肝转移”等）； - 保持报告风格客观、精炼、医学术语准确。
+FINDINGS: PA and lateral views of the chest provided. Lung volumes are somewhat low. There is no focal consolidation, effusion, or pneumothorax. The cardiomediastinal silhouette is normal. Imaged osseous structures are intact. No free air below the right hemidiaphragm is seen. IMPRESSION: No acute intrathoracic process.
+#
